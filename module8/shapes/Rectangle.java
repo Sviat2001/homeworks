@@ -4,7 +4,7 @@ public class Rectangle extends Shape{
     private static final String RECTANGLE_NAME = "Rectangle";
 
     @Override
-    public void printShape() {
+    public void print() {
         System.out.println(RECTANGLE_NAME);
     }
 }

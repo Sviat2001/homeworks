@@ -5,7 +5,7 @@ import module8.shapes.*;
 public class TestShapes {
 
     public static void printer(Shape shape) {
-        shape.printShape();
+        shape.print();
     }
 
     public static void main(String[] args) {

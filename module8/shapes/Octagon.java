@@ -4,7 +4,7 @@ public class Octagon extends Shape{
     private static final String OCTAGON_NAME = "Octagon";
 
     @Override
-    public void printShape() {
+    public void print() {
         System.out.println(OCTAGON_NAME);
     }
 }
