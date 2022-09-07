@@ -1,4 +1,4 @@
-package module8.interfaces;
+package module8.shapes;
 
 public interface Printable {
     void print();
