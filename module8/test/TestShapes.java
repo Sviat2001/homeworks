@@ -8,11 +8,11 @@ public class TestShapes {
         shape.print();
     }
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         Shape[] shapes = new Shape[]{new Circle(), new Pentagon(), new Triangle(), new Rectangle(), new Octagon()};
 
         for(Shape shape : shapes) {
             printer(shape);
         }
-    }
+    }*/
 }
