@@ -1,10 +1,10 @@
 package module8.shapes;
 
 public class Circle extends Shape{
-    private static final String CIRCLE_NAME = "Circle";
+    private static final String NAME = "Circle";
 
     @Override
-    public void print() {
-        System.out.println(CIRCLE_NAME);
+    public String getName() {
+        return NAME;
     }
 }

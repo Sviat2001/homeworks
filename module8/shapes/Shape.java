@@ -1,4 +1,5 @@
 package module8.shapes;
 
-public abstract class Shape implements Printable {
+public abstract class Shape {
+    public abstract String getName();
 }

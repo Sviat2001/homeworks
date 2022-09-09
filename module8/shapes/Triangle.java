@@ -1,10 +1,10 @@
 package module8.shapes;
 
 public class Triangle extends Shape{
-    private static final String TRIANGLE_NAME = "Triangle";
+    private static final String NAME = "Triangle";
 
     @Override
-    public void print() {
-        System.out.println(TRIANGLE_NAME);
+    public String getName() {
+        return NAME;
     }
 }
