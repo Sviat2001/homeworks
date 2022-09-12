@@ -11,8 +11,10 @@ public class TestAlgorithms {
         printArray(people);
         HeapSort.sort(people, sortObjectSelection(-1));
         printArray(people);
-        int resultOfSearch = LinearSearch.searchInAllArray(people);
-        System.out.println("\n" + resultOfSearch + " - people has identical weight and unique height");
+        int weightForSearch = 51;
+        int resultOfSearch = LinearSearch.search(people, weightForSearch);
+        System.out.println("\n" + resultOfSearch + " - people has identical weight " +
+                        weightForSearch + " and unique height");
     }
 
     public static Comparator<Person> sortObjectSelection(int type) {

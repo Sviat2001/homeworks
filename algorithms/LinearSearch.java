@@ -5,16 +5,6 @@ import java.util.ArrayList;
 
 public class LinearSearch { //O(n^2)
 
-    public static int searchInAllArray(Person[] people) {
-        int result = 0;
-
-        for(Person person : people) {
-            result += search(people, person.getWeight()) - 1;
-        }
-
-        return result;
-    }
-
     public static int search(Person[] people, int weightValue) {
         int result = 0;
         ArrayList<Integer> personHeightList = new ArrayList<>();
@@ -23,13 +13,14 @@ public class LinearSearch { //O(n^2)
         for(Person person : people) {
             if(person.getWeight() == weightValue) {
                 int height = person.getHeight();
+                int heightIndex = personHeightList.indexOf(height);
 
                 if(!personHeightList.contains(height)) {
                     personHeightQuantityList.add(true);
                     personHeightList.add(height);
                     result++;
-                } else if(personHeightQuantityList.get(personHeightList.indexOf(height))) {
-                    personHeightQuantityList.set(personHeightList.indexOf(height), false);
+                } else if(personHeightQuantityList.get(heightIndex)) {
+                    personHeightQuantityList.set(heightIndex, false);
                     result--;
                 }
             }
