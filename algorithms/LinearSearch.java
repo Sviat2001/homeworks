@@ -3,7 +3,7 @@ package algorithms;
 
 import java.util.ArrayList;
 
-public class LinearSearch {
+public class LinearSearch { //O(n^2)
 
     public static int searchInAllArray(Person[] people) {
         int result = 0;
