@@ -35,7 +35,7 @@ public class Exercise2 {
   }
 
   void buzz() {
-    while(currentInteger.get() < maxInteger.get()) {
+    while(currentInteger.get() <= maxInteger.get()) {
       try {
         semaphore.acquire();
         if(currentInteger.get() % 3 != 0
@@ -53,7 +53,7 @@ public class Exercise2 {
   }
 
   void fizzbuzz() {
-    while(currentInteger.get() < maxInteger.get()) {
+    while(currentInteger.get() <= maxInteger.get()) {
       try {
         semaphore.acquire();
         if(currentInteger.get() % 3 == 0
@@ -73,7 +73,7 @@ public class Exercise2 {
 
   void number() {
 
-    while(currentInteger.get() < maxInteger.get()) {
+    while(currentInteger.get() <= maxInteger.get() || forOutput.size() > 0) {
       try {
         semaphore.acquire();
 
@@ -84,7 +84,7 @@ public class Exercise2 {
         }
 
         while(forOutput.size() > 0) {
-          if(forOutput.size() == 1 && currentInteger.get() >= maxInteger.get()) {
+          if(forOutput.size() == 1 && currentInteger.get() > maxInteger.get()) {
             System.out.print(forOutput.poll());
           } else {
             System.out.print(forOutput.poll() + ", ");
@@ -104,7 +104,7 @@ public class Exercise2 {
 
 
   public static void main(String[] args) {
-    Exercise2 ex2 = new Exercise2(10);
+    Exercise2 ex2 = new Exercise2(15);
 
     Thread A = new Thread(ex2::fizz);
     Thread B = new Thread(ex2::buzz);
